@@ -220,6 +220,3 @@ function ServiceRow({
     </div>
   );
 }
-    </div>
-  );
-}
