@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import img from "@/assets/athletic.jpg";
+import golfImg from "@/assets/athletic-golf.jpg";
 
 export const Route = createFileRoute("/services/athletic-recruitment")({
   component: Page,
@@ -78,6 +79,17 @@ function Page() {
       </section>
 
       {/* Four pillars */}
+      <section className="container-editorial pt-4 pb-8">
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="overflow-hidden aspect-[4/5] bg-secondary">
+            <img src={img} alt="Tennis training" loading="lazy" className="h-full w-full object-cover" />
+          </div>
+          <div className="overflow-hidden aspect-[4/5] bg-secondary md:mt-16">
+            <img src={golfImg} alt="Golf training" loading="lazy" className="h-full w-full object-cover" />
+          </div>
+        </div>
+      </section>
+
       <section className="container-editorial py-28">
         <div className="max-w-2xl mb-16">
           <div className="eyebrow">Four pillars</div>
