@@ -86,6 +86,13 @@ function About() {
         </div>
       </section>
 
+      {/* Roadmap banner */}
+      <section className="container-editorial py-20">
+        <div className="overflow-hidden">
+          <img src={roadmapImg} alt="Your roadmap to global education" className="w-full h-auto object-cover" loading="lazy" />
+        </div>
+      </section>
+
       {/* Vision */}
       <section id="vision" className="relative bg-navy-deep text-primary-foreground py-32 lg:py-44 overflow-hidden">
         <div className="absolute inset-0 opacity-20">
