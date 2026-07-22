@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import mentorshipImg from "@/assets/student-mentorship.jpg";
 import campusImg from "@/assets/hero-campus.jpg";
+import roadmapImg from "@/assets/roadmap.jpg";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -82,6 +83,13 @@ function About() {
               We also place strong value on parental insight into each child's character and strengths, and view sustained parental engagement as a vital component of the preparation journey.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Roadmap banner */}
+      <section className="container-editorial py-20">
+        <div className="overflow-hidden">
+          <img src={roadmapImg} alt="Your roadmap to global education" className="w-full h-auto object-cover" loading="lazy" />
         </div>
       </section>
 
