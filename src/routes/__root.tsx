@@ -13,7 +13,7 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { SiteHeader } from "../components/site-header";
 import { SiteFooter } from "../components/site-footer";
-import logoAsset from "../assets/helm-logo.png.asset.json";
+
 
 function NotFoundComponent() {
   return (
