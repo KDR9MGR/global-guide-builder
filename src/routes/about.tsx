@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import mentorshipImg from "@/assets/student-mentorship.jpg";
 import campusImg from "@/assets/hero-campus.jpg";
+import roadmapImg from "@/assets/roadmap.jpg";
 
 export const Route = createFileRoute("/about")({
   component: About,
