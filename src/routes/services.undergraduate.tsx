@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import img from "@/assets/undergraduate.jpg";
+import heroImg from "@/assets/undergraduate-hero.png.asset.json";
 
 export const Route = createFileRoute("/services/undergraduate")({
   component: Page,
@@ -56,7 +56,7 @@ function Page() {
         eyebrow="Service 01"
         title={<>Undergraduate Admissions & <em className="italic text-teal-soft">Profile Development</em>.</>}
         intro="An end-to-end, multi-year mentorship process covering career discovery, college research and shortlisting, standardised testing strategy, application narrative and essays, letters of recommendation, interview preparation, and scholarship and financial aid applications — delivered through the Skill Development Program."
-        image={img}
+        image={heroImg.url}
         breadcrumb={[{ label: "Home", to: "/" }, { label: "Services" }, { label: "Undergraduate" }]}
       />
 
