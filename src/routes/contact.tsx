@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, ArrowUpRight, Check } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, ArrowUpRight, Check } from "lucide-react";
 
 export const Route = createFileRoute("/contact")({
   component: Contact,
@@ -97,14 +97,14 @@ function Contact() {
                   <Mail className="h-5 w-5 text-teal mt-0.5" />
                   <div>
                     <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Email</div>
-                    <a href="mailto:info@helmglobal.in" className="font-display text-lg text-navy-deep hover:text-teal">info@helmglobal.in</a>
+                    <a href="mailto:helmglobaleducation@gmail.com" className="font-display text-lg text-navy-deep hover:text-teal">helmglobaleducation@gmail.com</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
                   <Phone className="h-5 w-5 text-teal mt-0.5" />
                   <div>
                     <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">WhatsApp</div>
-                    <div className="font-display text-lg text-navy-deep">Available on enquiry</div>
+                    <a href="https://wa.me/919878196063" target="_blank" rel="noopener noreferrer" className="font-display text-lg text-navy-deep hover:text-teal">+91-9878196063</a>
                   </div>
                 </li>
                 <li className="flex items-start gap-4">
@@ -113,6 +113,13 @@ function Contact() {
                     <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Based in</div>
                     <div className="font-display text-lg text-navy-deep">India</div>
                     <div className="text-sm text-muted-foreground">Serving families globally</div>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <Instagram className="h-5 w-5 text-teal mt-0.5" />
+                  <div>
+                    <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Instagram</div>
+                    <a href="https://www.instagram.com/helm.global?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="font-display text-lg text-navy-deep hover:text-teal">@helm.global</a>
                   </div>
                 </li>
               </ul>
