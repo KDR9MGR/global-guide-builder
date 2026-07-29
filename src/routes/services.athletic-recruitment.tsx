@@ -3,6 +3,8 @@ import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import img from "@/assets/athletic.jpg";
 import golfImg from "@/assets/athletic-golf.jpg";
+import collageAsset from "@/assets/athletic-collage.png.asset.json";
+const collageImg = collageAsset.url;
 
 export const Route = createFileRoute("/services/athletic-recruitment")({
   component: Page,
@@ -46,7 +48,7 @@ function Page() {
         eyebrow="Service 03"
         title={<>Athletic <em className="italic text-teal-soft">Recruitment</em> for future collegiate athletes.</>}
         intro="High-quality college recruiting services for student-athletes and their families — trusted guidance through the entire recruitment journey."
-        image={img}
+        image={collageImg}
         breadcrumb={[{ label: "Home", to: "/" }, { label: "Services" }, { label: "Athletic Recruitment" }]}
       />
 
