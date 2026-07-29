@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import undergraduateBg from "@/assets/undergraduate-bg.png.asset.json";
+import gradesStrategy from "@/assets/grades-strategy.jpg.asset.json";
 
 export const Route = createFileRoute("/services/undergraduate")({
   component: Page,
@@ -99,9 +100,19 @@ function Page() {
       {/* Planning phase */}
       <section className="bg-secondary/60 py-28">
         <div className="container-editorial">
-          <div className="max-w-2xl mb-16">
-            <div className="eyebrow">Planning Phase</div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light">A long-term roadmap for every stage.</h2>
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16">
+            <div className="lg:col-span-5">
+              <div className="eyebrow">Planning Phase</div>
+              <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">A long-term roadmap for every stage.</h2>
+              <p className="mt-6 text-foreground/75 leading-relaxed">A four-year architecture that turns curiosity into conviction — anchoring every student's global journey in disciplined preparation.</p>
+            </div>
+            <div className="lg:col-span-7">
+              <img
+                src={gradesStrategy.url}
+                alt="Student holding a globe with graduation cap and open book — Grades 9-12 strategy"
+                className="w-full h-auto rounded-[2rem] object-cover shadow-lg"
+              />
+            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {grades.map((g) => (
