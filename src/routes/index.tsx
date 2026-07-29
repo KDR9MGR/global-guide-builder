@@ -4,7 +4,9 @@ import { ArrowUpRight, GraduationCap, Trophy, School, Sparkles, Target, Users, C
 import heroCampus from "@/assets/hero-campus.jpg";
 import undergraduateImg from "@/assets/undergraduate.jpg";
 import boardingImg from "@/assets/boarding-school.jpg";
-import athleticImg from "@/assets/athletic.jpg";
+import campusClockImg from "@/assets/campus-clocktower.png.asset.json";
+import tennisServeImg from "@/assets/tennis-serve.png.asset.json";
+import globalJourneyImg from "@/assets/global-journey.png.asset.json";
 import mentorshipImg from "@/assets/student-mentorship.jpg";
 import pillar1 from "@/assets/pillar-1.png.asset.json";
 import pillar2 from "@/assets/pillar-2.png.asset.json";
@@ -128,18 +130,15 @@ function Index() {
         </div>
 
         <div className="space-y-24">
-          <ServiceRow index="01" title="Undergraduate Admissions & Profile Development" description="An end-to-end, multi-year mentorship spanning career discovery, standardised testing strategy, application narrative, essays, interviews, and scholarship applications — delivered through 20+ Skill Development Academies." image={undergraduateImg} to="/services/undergraduate" icon={GraduationCap} />
+          <ServiceRow index="01" title="Undergraduate Admissions & Profile Development" description="An end-to-end, multi-year mentorship spanning career discovery, standardised testing strategy, application narrative, essays, interviews, and scholarship applications — delivered through 20+ Skill Development Academies." image={campusClockImg.url} to="/services/undergraduate" icon={GraduationCap} />
           <ServiceRow reverse index="02" title="US, UK & Singapore Boarding School Admissions" description="Personalised school research, outreach, application guidance, entrance exam preparation (SSAT/ISEE/Common Entrance), interview coaching, and first-year transition support." image={boardingImg} to="/services/boarding-schools" icon={School} />
-          <ServiceRow index="03" title="Athletic Recruitment" description="High-quality college recruiting services for student-athletes — combining tailored recruiting strategy, coach outreach, performance development, and academic support for balanced excellence." image={athleticImg} to="/services/athletic-recruitment" icon={Trophy} />
+          <ServiceRow index="03" title="Athletic Recruitment" description="High-quality college recruiting services for student-athletes — combining tailored recruiting strategy, coach outreach, performance development, and academic support for balanced excellence." image={tennisServeImg.url} to="/services/athletic-recruitment" icon={Trophy} />
         </div>
       </section>
 
       {/* PHILOSOPHY / QUOTE */}
       <section className="relative bg-navy-deep text-primary-foreground py-32 lg:py-44 overflow-hidden">
-        <div className="absolute inset-0 opacity-25">
-          <img src={mentorshipImg} alt="" className="h-full w-full object-cover" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/95 to-transparent" />
+        <img src={helmLogo} alt="Helm Global" className="absolute top-8 right-8 lg:top-12 lg:right-12 h-16 lg:h-24 w-auto opacity-90" />
         <div className="relative container-editorial">
           <div className="max-w-3xl">
             <div className="eyebrow text-teal-soft">A Philosophy</div>
@@ -157,7 +156,7 @@ function Index() {
       {/* CTA */}
       <section className="container-editorial py-28 lg:py-40">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-6">
             <div className="eyebrow">Take the first step</div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl lg:text-6xl text-navy-deep font-light leading-tight">
               Every remarkable admission begins with a conversation.
@@ -165,15 +164,18 @@ function Index() {
             <p className="mt-6 max-w-xl text-lg text-foreground/70 leading-relaxed">
               Tell us about your child. We'll respond within one business day with a private consultation calendar.
             </p>
-          </div>
-          <div className="lg:col-span-5 lg:justify-self-end">
             <Link
               to="/contact"
-              className="group inline-flex items-center gap-4 bg-navy-deep text-primary-foreground px-10 py-6 hover:bg-teal transition-colors"
+              className="group mt-10 inline-flex items-center gap-4 bg-navy-deep text-primary-foreground px-10 py-6 hover:bg-teal transition-colors"
             >
               <span className="text-xs uppercase tracking-[0.24em]">Begin your journey today</span>
               <ArrowUpRight className="h-5 w-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
+          </div>
+          <div className="lg:col-span-6">
+            <div className="overflow-hidden rounded-[2rem] aspect-[4/5] bg-secondary shadow-2xl">
+              <img src={globalJourneyImg.url} alt="Student looking toward global icons" className="h-full w-full object-cover" />
+            </div>
           </div>
         </div>
       </section>
@@ -219,7 +221,7 @@ function ServiceRow({
   return (
     <div className={`grid lg:grid-cols-12 gap-10 lg:gap-16 items-center ${reverse ? "lg:[&>*:first-child]:order-2" : ""}`}>
       <div className="lg:col-span-7">
-        <div className="overflow-hidden aspect-[4/3] bg-secondary">
+        <div className="overflow-hidden rounded-[2rem] aspect-[4/3] bg-secondary">
           <img src={image} alt={title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] hover:scale-105" />
         </div>
       </div>
