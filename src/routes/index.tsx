@@ -109,12 +109,10 @@ function Index() {
                 <PillarCard key={p.title} pillar={p} index={i} />
               ))}
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
-              <div className="hidden lg:block bg-secondary/60" />
+            <div className="grid md:grid-cols-2 gap-px bg-border lg:mx-auto lg:w-2/3">
               {pillars.slice(3).map((p, i) => (
                 <PillarCard key={p.title} pillar={p} index={i + 3} />
               ))}
-              <div className="hidden lg:block bg-secondary/60" />
             </div>
           </div>
         </div>
