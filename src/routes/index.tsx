@@ -130,8 +130,8 @@ function Index() {
         </div>
 
         <div className="space-y-24">
-          <ServiceRow index="01" title="Undergraduate Admissions & Profile Development" description="An end-to-end, multi-year mentorship spanning career discovery, standardised testing strategy, application narrative, essays, interviews, and scholarship applications — delivered through 20+ Skill Development Academies." image={campusClockImg.url} to="/services/undergraduate" icon={GraduationCap} />
-          <ServiceRow reverse index="02" title="US, UK & Singapore Boarding School Admissions" description="Personalised school research, outreach, application guidance, entrance exam preparation (SSAT/ISEE/Common Entrance), interview coaching, and first-year transition support." image={boardingImg} to="/services/boarding-schools" icon={School} />
+          <ServiceRow index="01" title="Undergraduate Admissions & Profile Development" description="An end-to-end, multi-year mentorship spanning career discovery, standardised testing strategy, application narrative, essays, interviews, and scholarship applications — delivered through 20+ Skill Development Academies." image={boardingImg} to="/services/undergraduate" icon={GraduationCap} />
+          <ServiceRow reverse index="02" title="US, UK & Singapore Boarding School Admissions" description="Personalised school research, outreach, application guidance, entrance exam preparation (SSAT/ISEE/Common Entrance), interview coaching, and first-year transition support." image={campusClockImg.url} to="/services/boarding-schools" icon={School} />
           <ServiceRow index="03" title="Athletic Recruitment" description="High-quality college recruiting services for student-athletes — combining tailored recruiting strategy, coach outreach, performance development, and academic support for balanced excellence." image={tennisServeImg.url} to="/services/athletic-recruitment" icon={Trophy} />
         </div>
       </section>
