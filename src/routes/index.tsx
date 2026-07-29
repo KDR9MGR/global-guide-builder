@@ -7,7 +7,7 @@ import boardingImg from "@/assets/boarding-school.jpg";
 import campusClockImg from "@/assets/campus-clocktower.png.asset.json";
 import tennisServeImg from "@/assets/tennis-serve.png.asset.json";
 import globalJourneyImg from "@/assets/global-journey.png.asset.json";
-import helmLogo from "@/assets/helm-logo.png";
+
 import pillar1 from "@/assets/pillar-1.png.asset.json";
 import pillar2 from "@/assets/pillar-2.png.asset.json";
 import pillar3 from "@/assets/pillar-3.png.asset.json";
@@ -138,7 +138,6 @@ function Index() {
 
       {/* PHILOSOPHY / QUOTE */}
       <section className="relative bg-navy-deep text-primary-foreground py-32 lg:py-44 overflow-hidden">
-        <img src={helmLogo} alt="Helm Global" className="absolute top-8 right-8 lg:top-12 lg:right-12 h-16 lg:h-24 w-auto opacity-90" />
         <div className="relative container-editorial">
           <div className="max-w-3xl">
             <div className="eyebrow text-teal-soft">A Philosophy</div>
