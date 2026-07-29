@@ -21,12 +21,74 @@ export const Route = createFileRoute("/services/boarding-schools")({
 });
 
 const process = [
-  { t: "Getting to Know You", b: "We begin by understanding the student's academic, social, and emotional needs, alongside your family's broader goals for their education." },
-  { t: "School Selection", b: "Through guided research, our youth mentorship programme, and an extensive network of school contacts, we build a curated shortlist segmented by admission likelihood." },
-  { t: "Profile Building", b: "18–36 months in advance we highlight and strengthen achievements while recommending tailored summer programmes to round out identity." },
-  { t: "Interview Preparation", b: "Structured mock interviews with detailed feedback so students present themselves with confidence and clarity." },
-  { t: "Applications & Essays", b: "Every essay is treated as a dedicated project, authentically reflecting the student's individuality." },
-  { t: "Offer Management & Transition", b: "Scholarship applications, offer negotiation and first-year transition support once placement is confirmed." },
+  {
+    t: "Initial Consultation & Family Discovery",
+    bullets: [
+      "Thorough consultation with student and parents to understand academic background, personal interests, extracurricular strengths, financial parameters, and aspirations",
+      "Identification of entry point and target countries based on the student's age, profile, and family objectives",
+      "Honest assessment of the student's current competitiveness across a range of school tiers",
+    ],
+  },
+  {
+    t: "School Research & Shortlisting",
+    bullets: [
+      "Comprehensive research across US, UK, and Singapore schools — covering academic culture, curriculum, extracurricular offerings, pastoral care, diversity, alumni outcomes, and university placement records",
+      "Development of a personalised shortlist spanning aspirational, target, and realistic categories",
+      "Detailed school profiles shared with the family, covering what each institution values and what distinguishes its admissions process",
+    ],
+  },
+  {
+    t: "Academic & Test Preparation",
+    bullets: [
+      "Structured SSAT or ISEE preparation for US boarding school applicants",
+      "Common Entrance, Pre-Test, and school-specific entrance examination preparation for UK applicants",
+      "English language proficiency preparation (IELTS or school-specific tests) for international students",
+      "Subject-specific academic strengthening to ensure the student's grades reflect their genuine potential",
+    ],
+  },
+  {
+    t: "Application Development",
+    bullets: [
+      "Student essay or personal statement development — from initial brainstorming through to final draft, guided by specialist writing mentors",
+      "Teacher recommendation strategy: identifying the strongest recommenders, briefing them on what to emphasise, and reviewing drafts where possible",
+      "Activity list and portfolio development — ensuring extracurricular achievements are presented clearly, compellingly, and in the language the school's admissions team expects",
+      "Completion and review of all application components before submission",
+    ],
+  },
+  {
+    t: "Interview Preparation",
+    bullets: [
+      "Targeted mock interview preparation tailored to each school's known interview style — conversational, structured, or panel",
+      "Coaching on how to articulate interests, values, and aspirations with confidence and authenticity",
+      "Guidance on campus visit etiquette and how to make the most of every interaction with admissions staff and current students",
+    ],
+  },
+  {
+    t: "Scholarship Applications",
+    bullets: [
+      "Identification of all scholarship opportunities available at target schools — academic, music, art, drama, and sport",
+      "Scholarship essay and portfolio development with specialist support",
+      "Audition or portfolio preparation where applicable",
+      "Financial aid application guidance and documentation support",
+    ],
+  },
+  {
+    t: "Offer Management & Final Decision",
+    bullets: [
+      "Support in evaluating and comparing offers across schools — weighing academic fit, financial award, pastoral environment, and university placement outcomes",
+      "Guidance on waitlist management and deferral responses where applicable",
+      "Support for families appealing financial aid awards",
+      "Coordination of enrolment documentation, deposit payment, and pre-arrival logistics",
+    ],
+  },
+  {
+    t: "Transition & First-Year Preparation",
+    bullets: [
+      "Preparatory reading lists and academic preparation for the curriculum of the chosen school",
+      "Guidance on boarding life: managing independence, building relationships, and thriving in a residential academic environment",
+      "Ongoing mentorship during the student's first term to ensure a smooth, confident transition",
+    ],
+  },
 ];
 
 const advantages = [
@@ -81,15 +143,27 @@ function Page() {
         <div className="container-editorial">
           <div className="max-w-2xl mb-16">
             <div className="eyebrow">The Journey</div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light">Six stages of dedicated mentorship.</h2>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light">Eight stages of dedicated mentorship.</h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+          <div className="space-y-5">
             {process.map((s, i) => (
-              <div key={s.t} className="bg-card p-10 min-h-[260px]">
-                <div className="font-display text-teal text-lg">0{i + 1}</div>
-                <h3 className="mt-4 font-display text-xl text-navy-deep leading-snug">{s.t}</h3>
-                <p className="mt-3 text-sm text-foreground/70 leading-relaxed">{s.b}</p>
-              </div>
+              <article key={s.t} className="bg-card overflow-hidden border border-border">
+                <header className="grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 bg-navy-deep px-6 py-4 sm:px-8">
+                  <h3 className="min-w-0 font-display text-lg md:text-xl text-primary-foreground leading-snug">
+                    <span className="text-teal-soft font-medium tracking-wide">Step {i + 1}</span>
+                    <span className="mx-3 text-primary-foreground/40">|</span>
+                    {s.t}
+                  </h3>
+                </header>
+                <ul className="divide-y divide-border">
+                  {s.bullets.map((b) => (
+                    <li key={b} className="flex gap-4 items-start px-6 py-4 sm:px-8">
+                      <span className="text-teal shrink-0 mt-1 font-display">✦</span>
+                      <span className="text-foreground/80 leading-relaxed">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             ))}
           </div>
         </div>
