@@ -50,13 +50,32 @@ const academies = ["Artificial Intelligence", "Robotics & Engineering", "Entrepr
 function Page() {
   return (
     <div>
-      <PageHero
-        eyebrow="Service 01"
-        title={<>Undergraduate Admissions & <em className="italic text-teal-soft">Profile Development</em>.</>}
-        intro="An end-to-end, multi-year mentorship process covering career discovery, college research and shortlisting, standardised testing strategy, application narrative and essays, letters of recommendation, interview preparation, and scholarship and financial aid applications — delivered through the Skill Development Program."
-        image={heroImg.url}
-        breadcrumb={[{ label: "Home", to: "/" }, { label: "Services" }, { label: "Undergraduate" }]}
-      />
+      {/* Header */}
+      <section className="bg-navy-deep text-primary-foreground">
+        <div className="container-editorial pt-32 pb-20 lg:pt-44 lg:pb-28">
+          <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-primary-foreground/60 mb-10">
+            <Link to="/" className="hover:text-teal-soft">Home</Link>
+            <span>/</span>
+            <span>Services</span>
+            <span>/</span>
+            <span className="text-teal-soft">Undergraduate</span>
+          </div>
+          <div className="max-w-4xl">
+            <div className="eyebrow text-teal-soft">Service 01</div>
+            <h1 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05]">
+              Undergraduate Admissions & <em className="italic text-teal-soft">Profile Development</em>.
+            </h1>
+            <div className="mt-10 max-w-3xl space-y-6 text-lg text-primary-foreground/80 leading-relaxed font-light">
+              <p>
+                An end-to-end, multi-year mentorship process covering career discovery, college research and shortlisting, standardised testing strategy, application narrative and essays, letters of recommendation, interview preparation, and scholarship and financial aid applications. Delivered through the Skill Development Program — 20+ expert-led academies (Artificial Intelligence, Robotics & Engineering, Entrepreneurship, Social Impact & Policy, Research & Inquiry, Creative Arts & Writing) that each culminate in a verifiable capstone project.
+              </p>
+              <p>
+                We work closely with students from Grades 9 through 12 on their college applications, equipping them to present themselves as strong candidates and future leaders poised to make an impact. Our approach combines a proven, hands-on methodology with a personalized strategy tailored to each student's unique strengths and passions. Through careful identification and development of each individual's potential, we deliver targeted support that enhances growth opportunities and enables students to distinguish themselves throughout the college admissions process and beyond.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Overview */}
       <section className="container-editorial py-28 lg:py-36">
