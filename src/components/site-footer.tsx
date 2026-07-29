@@ -41,15 +41,19 @@ export function SiteFooter() {
             <ul className="mt-5 space-y-4 text-sm text-primary-foreground/80">
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 mt-0.5 text-teal-soft" />
-                <a href="mailto:info@helmglobal.in" className="hover:text-teal-soft">info@helmglobal.in</a>
+                <a href="mailto:helmglobaleducation@gmail.com" className="hover:text-teal-soft">helmglobaleducation@gmail.com</a>
               </li>
               <li className="flex items-start gap-3">
                 <Phone className="h-4 w-4 mt-0.5 text-teal-soft" />
-                <span>+91 · Available via WhatsApp</span>
+                <a href="https://wa.me/919878196063" target="_blank" rel="noopener noreferrer" className="hover:text-teal-soft">+91-9878196063</a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 text-teal-soft" />
                 <span>India · Serving families across US, UK, Canada, Singapore, Hong Kong & Germany</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Instagram className="h-4 w-4 mt-0.5 text-teal-soft" />
+                <a href="https://www.instagram.com/helm.global?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="hover:text-teal-soft">@helm.global</a>
               </li>
             </ul>
           </div>
