@@ -2,6 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Check } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import img from "@/assets/boarding-school.jpg";
+import advantageAsset from "@/assets/boarding-advantage.png.asset.json";
+import faqAsset from "@/assets/boarding-faq.png.asset.json";
+const advantageImg = advantageAsset.url;
+const faqImg = faqAsset.url;
 
 export const Route = createFileRoute("/services/boarding-schools")({
   component: Page,
@@ -121,15 +125,22 @@ function Page() {
             <div className="eyebrow">The Helm Global Advantage</div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">In Boarding School Admissions</h2>
           </div>
-          <div className="divide-y divide-border border-t border-border bg-card">
-            {advantages.map((a) => (
-              <div key={a.label} className="grid md:grid-cols-12 gap-6 p-8 lg:p-10">
-                <div className="md:col-span-4">
-                  <h3 className="font-display text-xl text-navy-deep leading-snug">{a.label}</h3>
-                </div>
-                <p className="md:col-span-8 text-foreground/80 leading-relaxed">{a.body}</p>
+          <div className="grid lg:grid-cols-12 gap-12 items-start">
+            <div className="lg:col-span-4 lg:sticky lg:top-28">
+              <div className="overflow-hidden rounded-[2rem] bg-card p-8">
+                <img src={advantageImg} alt="Trust, growth and partnership" loading="lazy" className="w-full h-auto" />
               </div>
-            ))}
+            </div>
+            <div className="lg:col-span-8 divide-y divide-border border-t border-border bg-card">
+              {advantages.map((a) => (
+                <div key={a.label} className="grid md:grid-cols-12 gap-6 p-8 lg:p-10">
+                  <div className="md:col-span-4">
+                    <h3 className="font-display text-xl text-navy-deep leading-snug">{a.label}</h3>
+                  </div>
+                  <p className="md:col-span-8 text-foreground/80 leading-relaxed">{a.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -140,6 +151,9 @@ function Page() {
           <div className="lg:col-span-4">
             <div className="eyebrow text-teal-soft">Questions</div>
             <h2 className="mt-4 font-display text-4xl md:text-5xl font-light leading-tight">Common Questions Parents Ask — and Our Answers</h2>
+            <div className="mt-10 overflow-hidden rounded-[2rem] bg-primary-foreground/5 p-6">
+              <img src={faqImg} alt="Families with questions about boarding school" loading="lazy" className="w-full h-auto" />
+            </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 divide-y divide-white/10">
             {faqs.map((f) => (
