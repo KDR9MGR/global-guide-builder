@@ -183,6 +183,24 @@ function Index() {
   );
 }
 
+function PillarCard({ pillar, index }: { pillar: typeof pillars[number]; index: number }) {
+  return (
+    <div className="group relative bg-card overflow-hidden min-h-[380px] flex flex-col hover:bg-navy-deep hover:text-primary-foreground transition-colors duration-500">
+      <div className="aspect-[4/3] overflow-hidden bg-secondary">
+        <img src={pillar.image} alt={pillar.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+      </div>
+      <div className="p-8 flex-1 flex flex-col">
+        <div className="flex items-center justify-between">
+          <span className="font-display text-xs text-muted-foreground group-hover:text-teal-soft transition-colors">0{index + 1}</span>
+          <pillar.icon className="h-5 w-5 text-teal group-hover:text-teal-soft transition-colors" />
+        </div>
+        <h3 className="mt-6 font-display text-2xl leading-tight">{pillar.title}</h3>
+        <p className="mt-4 text-sm leading-relaxed text-foreground/70 group-hover:text-primary-foreground/75 transition-colors">{pillar.body}</p>
+      </div>
+    </div>
+  );
+}
+
 function ServiceRow({
   index,
   title,
