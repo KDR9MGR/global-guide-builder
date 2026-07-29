@@ -114,12 +114,32 @@ function Page() {
         </div>
       </section>
 
+      {/* Advantage */}
+      <section className="bg-secondary/60 py-28 lg:py-36">
+        <div className="container-editorial">
+          <div className="max-w-3xl mb-16">
+            <div className="eyebrow">The Helm Global Advantage</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">In Boarding School Admissions</h2>
+          </div>
+          <div className="divide-y divide-border border-t border-border bg-card">
+            {advantages.map((a) => (
+              <div key={a.label} className="grid md:grid-cols-12 gap-6 p-8 lg:p-10">
+                <div className="md:col-span-4">
+                  <h3 className="font-display text-xl text-navy-deep leading-snug">{a.label}</h3>
+                </div>
+                <p className="md:col-span-8 text-foreground/80 leading-relaxed">{a.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="bg-navy-deep text-primary-foreground py-28">
         <div className="container-editorial grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-4">
-            <div className="eyebrow text-teal-soft">Frequently Asked</div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl font-light leading-tight">What families ask us first.</h2>
+            <div className="eyebrow text-teal-soft">Questions</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-light leading-tight">Common Questions Parents Ask — and Our Answers</h2>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 divide-y divide-white/10">
             {faqs.map((f) => (
@@ -137,6 +157,7 @@ function Page() {
           </div>
         </div>
       </section>
+
     </div>
   );
 }
