@@ -9,7 +9,7 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
-              <img src={logoUrl} alt="Helm Global" className="h-12 w-12 object-contain bg-white/5 p-1" />
+              <img src={logoAsset.url} alt="Helm Global" className="h-12 w-12 object-contain bg-white/5 p-1" />
               <div className="leading-tight">
                 <div className="font-display text-xl">Helm Global</div>
                 <div className="text-[10px] tracking-[0.24em] uppercase text-primary-foreground/60">Education Consultancy</div>
