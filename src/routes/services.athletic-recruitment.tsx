@@ -24,6 +24,14 @@ const why = [
   { t: "Showcases & Recruitment Events", b: "Dedicated showcase events and organised scouting opportunities to connect international athletes with programmes." },
 ];
 
+const whyHelm = [
+  { t: "Personalised Coaching", b: "Every athlete receives a bespoke recruitment plan tailored to their sport, performance level, academic profile, and target schools — not a generic template." },
+  { t: "Coach Network Access", b: "Our team has established relationships and deep knowledge of coaching staff expectations across Division I, II, and NAIA programmes in multiple sports." },
+  { t: "Academic + Athletic Integration", b: "We manage both the academic application and the recruitment process simultaneously — so nothing falls through the cracks." },
+  { t: "Scholarship Maximisation", b: "We identify every available scholarship and financial aid avenue — athletic, academic, and merit-based — to maximise the financial outcome for each family." },
+  { t: "International Expertise", b: "We specialise in guiding international student-athletes through the unique regulatory and logistical challenges of the US college sports system." },
+];
+
 const pillars = [
   { n: "01", t: "Personalised Recruitment Strategy", b: "A tailored recruiting plan that aligns academic interests, athletic strengths and long-term goals — focused on the right camps, coaches and timelines for maximum impact." },
   { n: "02", t: "Coach Outreach & Visibility", b: "Connect with coaches strategically, present with confidence, and stand out through curated highlight reels, strong communication and standout performances." },
@@ -112,6 +120,24 @@ function Page() {
 
       {/* CTA */}
       <section className="bg-navy-deep text-primary-foreground py-24">
+        <div className="container-editorial mb-20">
+          <div className="max-w-2xl mb-14">
+            <div className="eyebrow text-teal-soft">Why Helm Global for Athletic Recruitment?</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl font-light leading-tight">Five reasons families trust us with their athlete's future.</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-primary-foreground/10">
+            {whyHelm.map((w, i) => (
+              <div key={w.t} className="bg-navy-deep p-10">
+                <div className="flex items-center justify-between">
+                  <span className="font-display text-teal-soft text-lg">0{i + 1}</span>
+                  <span className="h-px w-16 bg-teal-soft/40" />
+                </div>
+                <h3 className="mt-6 font-display text-2xl leading-snug">{w.t}</h3>
+                <p className="mt-3 text-primary-foreground/75 leading-relaxed">{w.b}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         <div className="container-editorial flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div>
             <div className="eyebrow text-teal-soft">Ready to be recruited?</div>
