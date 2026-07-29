@@ -6,17 +6,22 @@ import undergraduateImg from "@/assets/undergraduate.jpg";
 import boardingImg from "@/assets/boarding-school.jpg";
 import athleticImg from "@/assets/athletic.jpg";
 import mentorshipImg from "@/assets/student-mentorship.jpg";
+import pillar1 from "@/assets/pillar-1.png.asset.json";
+import pillar2 from "@/assets/pillar-2.png.asset.json";
+import pillar3 from "@/assets/pillar-3.png.asset.json";
+import pillar4 from "@/assets/pillar-4.png.asset.json";
+import pillar5 from "@/assets/pillar-5.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
 const pillars = [
-  { icon: Target, title: "Skill-Centred Counselling", body: "Building the capabilities universities genuinely reward — not just the credentials they require." },
-  { icon: Compass, title: "Global Profile Development", body: "Sustained, expert-led extracurricular profiles calibrated to target institutions." },
-  { icon: Sparkles, title: "Elite Applications Support", body: "Top 1% advisors guiding essays, activities, interviews and strategy." },
-  { icon: BookOpen, title: "Academic Excellence Coaching", body: "Specialist study mentors ensuring grades never become the weak link." },
-  { icon: Users, title: "Skill Development Academies", body: "20+ academies across AI, Robotics, Entrepreneurship, Social Impact and Policy — each ending in a verifiable capstone." },
+  { icon: Target, title: "Skill-Centred Counselling", body: "Building the capabilities universities genuinely reward — not just the credentials they require.", image: pillar1.url },
+  { icon: Compass, title: "Global Profile Development", body: "Sustained, expert-led extracurricular profiles calibrated to target institutions.", image: pillar2.url },
+  { icon: Sparkles, title: "Elite Applications Support", body: "Top 1% advisors guiding essays, activities, interviews and strategy.", image: pillar3.url },
+  { icon: BookOpen, title: "Academic Excellence Coaching", body: "Specialist study mentors ensuring grades never become the weak link.", image: pillar4.url },
+  { icon: Users, title: "Skill Development Academies", body: "20+ academies across AI, Robotics, Entrepreneurship, Social Impact and Policy — each ending in a verifiable capstone.", image: pillar5.url },
 ];
 
 const destinations = ["United States", "United Kingdom", "Singapore", "Hong Kong", "Canada", "Germany"];
@@ -98,21 +103,19 @@ function Index() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
-            {pillars.map((p, i) => (
-              <div key={p.title} className="group bg-card p-10 min-h-[300px] flex flex-col justify-between hover:bg-navy-deep hover:text-primary-foreground transition-colors duration-500">
-                <div className="flex items-center justify-between">
-                  <span className="font-display text-xs text-muted-foreground group-hover:text-teal-soft transition-colors">
-                    0{i + 1}
-                  </span>
-                  <p.icon className="h-5 w-5 text-teal group-hover:text-teal-soft transition-colors" />
-                </div>
-                <div className="mt-16">
-                  <h3 className="font-display text-2xl leading-tight">{p.title}</h3>
-                  <p className="mt-4 text-sm leading-relaxed text-foreground/70 group-hover:text-primary-foreground/75 transition-colors">{p.body}</p>
-                </div>
-              </div>
-            ))}
+          <div className="space-y-px">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+              {pillars.slice(0, 3).map((p, i) => (
+                <PillarCard key={p.title} pillar={p} index={i} />
+              ))}
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-border">
+              <div className="hidden lg:block bg-secondary/60" />
+              {pillars.slice(3).map((p, i) => (
+                <PillarCard key={p.title} pillar={p} index={i + 3} />
+              ))}
+              <div className="hidden lg:block bg-secondary/60" />
+            </div>
           </div>
         </div>
       </section>
@@ -176,6 +179,24 @@ function Index() {
           </div>
         </div>
       </section>
+    </div>
+  );
+}
+
+function PillarCard({ pillar, index }: { pillar: typeof pillars[number]; index: number }) {
+  return (
+    <div className="group relative bg-card overflow-hidden min-h-[380px] flex flex-col hover:bg-navy-deep hover:text-primary-foreground transition-colors duration-500">
+      <div className="aspect-[4/3] overflow-hidden bg-secondary">
+        <img src={pillar.image} alt={pillar.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+      </div>
+      <div className="p-8 flex-1 flex flex-col">
+        <div className="flex items-center justify-between">
+          <span className="font-display text-xs text-muted-foreground group-hover:text-teal-soft transition-colors">0{index + 1}</span>
+          <pillar.icon className="h-5 w-5 text-teal group-hover:text-teal-soft transition-colors" />
+        </div>
+        <h3 className="mt-6 font-display text-2xl leading-tight">{pillar.title}</h3>
+        <p className="mt-4 text-sm leading-relaxed text-foreground/70 group-hover:text-primary-foreground/75 transition-colors">{pillar.body}</p>
+      </div>
     </div>
   );
 }
