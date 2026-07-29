@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
-import logoUrl from "@/assets/helm-logo.png";
+import logoAsset from "@/assets/helm-logo.png.asset.json";
 
 export function SiteFooter() {
   return (

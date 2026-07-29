@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoUrl from "@/assets/helm-logo.png";
+import logoAsset from "@/assets/helm-logo.png.asset.json";
 
 const services = [
   { to: "/services/undergraduate", label: "Undergraduate Admissions", desc: "Profile development & applications, Grades 8–12." },
