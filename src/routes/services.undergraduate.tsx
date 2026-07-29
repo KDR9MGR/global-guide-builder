@@ -85,14 +85,21 @@ function Page() {
 
       {/* Overview */}
       <section className="container-editorial py-28 lg:py-36">
-        <div className="grid lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-4">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="lg:col-span-5">
             <div className="eyebrow">Overview</div>
             <h2 className="mt-6 font-display text-4xl text-navy-deep font-light leading-tight">Grades 9 through 12, with a strategy that compounds.</h2>
           </div>
-          <div className="lg:col-span-7 lg:col-start-6 text-lg leading-relaxed text-foreground/80 space-y-6">
-            <p>We work closely with students from Grades 9 through 12 on their college applications, equipping them to present themselves as strong candidates and future leaders poised to make an impact.</p>
-            <p>Our approach combines a proven, hands-on methodology with a personalised strategy tailored to each student's unique strengths and passions. Through careful identification and development of each individual's potential, we deliver targeted support that enhances growth opportunities and enables students to distinguish themselves throughout the college admissions process and beyond.</p>
+          <div className="lg:col-span-7 space-y-8">
+            <img
+              src={gradesStrategy.url}
+              alt="Student holding a globe with graduation cap and open book — Grades 9-12 strategy"
+              className="w-full h-auto rounded-[2rem] object-cover shadow-lg"
+            />
+            <div className="text-lg leading-relaxed text-foreground/80 space-y-6">
+              <p>We work closely with students from Grades 9 through 12 on their college applications, equipping them to present themselves as strong candidates and future leaders poised to make an impact.</p>
+              <p>Our approach combines a proven, hands-on methodology with a personalised strategy tailored to each student's unique strengths and passions. Through careful identification and development of each individual's potential, we deliver targeted support that enhances growth opportunities and enables students to distinguish themselves throughout the college admissions process and beyond.</p>
+            </div>
           </div>
         </div>
       </section>
