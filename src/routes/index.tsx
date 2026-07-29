@@ -8,6 +8,7 @@ import campusClockImg from "@/assets/campus-clocktower.png.asset.json";
 import tennisServeImg from "@/assets/tennis-serve.png.asset.json";
 import globalJourneyImg from "@/assets/global-journey.png.asset.json";
 import mentorshipImg from "@/assets/student-mentorship.jpg";
+import helmLogo from "@/assets/helm-logo.png";
 import pillar1 from "@/assets/pillar-1.png.asset.json";
 import pillar2 from "@/assets/pillar-2.png.asset.json";
 import pillar3 from "@/assets/pillar-3.png.asset.json";
