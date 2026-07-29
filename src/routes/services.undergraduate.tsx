@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import undergraduateBg from "@/assets/undergraduate-bg.png.asset.json";
 
 export const Route = createFileRoute("/services/undergraduate")({
   component: Page,
@@ -51,8 +52,12 @@ function Page() {
   return (
     <div>
       {/* Header */}
-      <section className="bg-navy-deep text-primary-foreground">
-        <div className="container-editorial pt-32 pb-20 lg:pt-44 lg:pb-28">
+      <section
+        className="relative bg-navy-deep text-primary-foreground bg-cover bg-center"
+        style={{ backgroundImage: `url(${undergraduateBg.url})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/90 to-navy-deep/40" />
+        <div className="relative container-editorial pt-32 pb-20 lg:pt-44 lg:pb-28">
           <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.24em] text-primary-foreground/60 mb-10">
             <Link to="/" className="hover:text-teal-soft">Home</Link>
             <span>/</span>
