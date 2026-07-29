@@ -2,9 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
 import img from "@/assets/athletic.jpg";
-import golfImg from "@/assets/athletic-golf.jpg";
+import golfAsset from "@/assets/athletic-golf-coach.jpg.asset.json";
 import collageAsset from "@/assets/athletic-collage.png.asset.json";
 const collageImg = collageAsset.url;
+const golfImg = golfAsset.url;
 
 export const Route = createFileRoute("/services/athletic-recruitment")({
   component: Page,
