@@ -4,8 +4,26 @@ import { PageHero } from "@/components/page-hero";
 import img from "@/assets/boarding-school.jpg";
 import advantageAsset from "@/assets/boarding-advantage.png.asset.json";
 import faqAsset from "@/assets/boarding-faq.png.asset.json";
+import step1Asset from "@/assets/boarding-step-31.png.asset.json";
+import step2Asset from "@/assets/boarding-step-32.png.asset.json";
+import step3Asset from "@/assets/boarding-step-33.png.asset.json";
+import step4Asset from "@/assets/boarding-step-34.png.asset.json";
+import step5Asset from "@/assets/boarding-step-35.png.asset.json";
+import step6Asset from "@/assets/boarding-step-36.png.asset.json";
+import step7Asset from "@/assets/boarding-step-37.png.asset.json";
+import step8Asset from "@/assets/boarding-step-38.png.asset.json";
 const advantageImg = advantageAsset.url;
 const faqImg = faqAsset.url;
+const stepImages = [
+  step1Asset.url,
+  step2Asset.url,
+  step3Asset.url,
+  step4Asset.url,
+  step5Asset.url,
+  step6Asset.url,
+  step7Asset.url,
+  step8Asset.url,
+];
 
 export const Route = createFileRoute("/services/boarding-schools")({
   component: Page,
@@ -155,14 +173,24 @@ function Page() {
                     {s.t}
                   </h3>
                 </header>
-                <ul className="divide-y divide-border">
-                  {s.bullets.map((b) => (
-                    <li key={b} className="flex gap-4 items-start px-6 py-4 sm:px-8">
-                      <span className="text-teal shrink-0 mt-1 font-display">✦</span>
-                      <span className="text-foreground/80 leading-relaxed">{b}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="grid md:grid-cols-[minmax(0,1fr)_18rem]">
+                  <ul className="divide-y divide-border order-2 md:order-1">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex gap-4 items-start px-6 py-4 sm:px-8">
+                        <span className="text-teal shrink-0 mt-1 font-display">✦</span>
+                        <span className="text-foreground/80 leading-relaxed">{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="order-1 md:order-2 md:border-l border-border bg-secondary/40">
+                    <img
+                      src={stepImages[i]}
+                      alt={`${s.t} illustration`}
+                      loading="lazy"
+                      className="w-full h-full object-cover aspect-[4/3] md:aspect-auto"
+                    />
+                  </div>
+                </div>
               </article>
             ))}
           </div>
