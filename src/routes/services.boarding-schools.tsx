@@ -25,10 +25,22 @@ const process = [
   { t: "Offer Management & Transition", b: "Scholarship applications, offer negotiation and first-year transition support once placement is confirmed." },
 ];
 
-const faqs = [
-  { q: "Is financial aid available?", a: "Yes. Several top US boarding schools operate needs-blind admissions for international students and can meet 100% of demonstrated need. UK schools offer scholarship competitions with fee reductions of 50% or more." },
-  { q: "How is a boarding school application different from a university application?", a: "Core components are similar (records, scores, references, essays, interviews), but boarding school applications assess readiness for a residential academic environment — focusing on intellectual curiosity, emotional maturity, resilience and distinctive talent." },
+const advantages = [
+  { label: "Deep Institutional Knowledge", body: "We have researched every major boarding school across the US, UK, and Singapore in detail — their culture, priorities, and what distinguishes a successful applicant from an unsuccessful one at each institution." },
+  { label: "Personalised Strategy", body: "Every family receives a bespoke admissions plan. We do not use templates or apply cookie-cutter approaches — because the right school for one student is the wrong school for another." },
+  { label: "Writing Excellence", body: "Our specialist writing mentors produce personal statements and essays that are genuinely distinctive — essays that capture the student's authentic voice and speak directly to what each school is seeking." },
+  { label: "Interview Coaching", body: "Our mock interview programme is tailored to each school's known format and culture, giving students the confidence and preparation to perform at their absolute best." },
+  { label: "Scholarship Maximisation", body: "We identify every available funding opportunity and support every scholarship application — ensuring families access the best possible financial outcome." },
+  { label: "Holistic Support", body: "We support not just the application — but the student: their academic preparation, their personal development, and their readiness to thrive in the environment they are entering." },
 ];
+
+const faqs = [
+  { q: "When should we start the boarding school admissions process?", a: "For US and UK boarding schools, serious preparation should begin at least 18 to 24 months before the intended entry date. For Year 9 (13+) entry, this means starting in Year 6 or Year 7 at the latest. For Sixth Form (16+) entry, preparation should begin in Year 9 or early Year 10. Helm Global recommends an initial consultation at least two years before your target entry point." },
+  { q: "How selective are these schools, really?", a: "The most prestigious US boarding schools, such as Phillips Exeter and Andover, admit between 12% and 18% of applicants in a typical year — comparable to highly selective universities. Top UK schools such as Eton and Wycombe Abbey are similarly competitive. Singapore's leading schools have limited international intake each year. In every case, a well-prepared, strategically positioned application makes a significant difference." },
+  { q: "Is financial aid available?", a: "Yes — and in many cases it is substantial. Several of the most prestigious US boarding schools operate needs-blind admissions for international students and can meet 100% of demonstrated financial need. UK schools offer scholarship competitions with fee reductions of up to 50% or more. Helm Global identifies every available funding avenue for each family and supports all scholarship applications." },
+  { q: "How is a boarding school application different from a university application?", a: "The core components are similar — academic records, test scores, teacher references, personal essays, and interviews — but the context and content differ significantly. Boarding school applications assess readiness for a residential, highly demanding academic environment. They are looking for intellectual curiosity, emotional maturity, resilience, and evidence of distinctive talent or interest. Helm Global knows exactly what each school is looking for — and we build each application accordingly." },
+];
+
 
 function Page() {
   return (
