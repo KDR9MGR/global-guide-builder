@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/page-hero";
-import img from "@/assets/undergraduate.jpg";
+import heroImg from "@/assets/undergraduate-hero.png.asset.json";
 
 export const Route = createFileRoute("/services/undergraduate")({
   component: Page,
