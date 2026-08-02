@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logoUrl from "@/assets/helm-logo.png";
+import logoAsset from "@/assets/helm-logo.png.asset.json";
 
 const services = [
   { to: "/services/undergraduate", label: "Undergraduate Admissions", desc: "Profile development & applications, Grades 8–12." },
@@ -19,13 +19,9 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-xl">
-      <div className="container-editorial flex h-20 items-center justify-between">
+      <div className="container-editorial flex h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logoUrl} alt="Helm Global Education" className="h-11 w-11 object-contain" />
-          <div className="hidden sm:block leading-tight">
-            <div className="font-display text-lg text-navy-deep">Helm Global</div>
-            <div className="text-[10px] tracking-[0.24em] uppercase text-muted-foreground">Education Consultancy</div>
-          </div>
+          <img src={logoAsset.url} alt="Helm Global Education" className="h-16 w-auto object-contain" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-9 text-sm">
