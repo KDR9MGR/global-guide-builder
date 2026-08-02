@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
-import logoUrl from "@/assets/helm-logo.png";
+import logoAsset from "@/assets/helm-logo.png.asset.json";
 
 export function SiteFooter() {
   return (
@@ -9,11 +9,7 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
-              <img src={logoUrl} alt="Helm Global" className="h-12 w-12 object-contain bg-white/5 p-1" />
-              <div className="leading-tight">
-                <div className="font-display text-xl">Helm Global</div>
-                <div className="text-[10px] tracking-[0.24em] uppercase text-primary-foreground/60">Education Consultancy</div>
-              </div>
+              <img src={logoAsset.url} alt="Helm Global" className="h-20 w-auto object-contain" />
             </div>
             <p className="mt-6 max-w-md font-display text-2xl leading-snug text-primary-foreground/90">
               A long-term partner in each student's intellectual and professional development.
