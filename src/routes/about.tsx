@@ -94,12 +94,7 @@ function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-navy-deep via-navy-deep/95 to-navy-deep" />
         <div className="relative container-editorial">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-5 order-2 lg:order-1">
-              <div className="overflow-hidden rounded-[2rem] shadow-2xl">
-                <img src={roadmapImg} alt="Your roadmap to global education" className="h-auto w-full object-cover" loading="lazy" />
-              </div>
-            </div>
-            <div className="lg:col-span-7 order-1 lg:order-2">
+            <div className="lg:col-span-7">
               <div className="eyebrow text-teal-soft">Vision</div>
               <p className="mt-8 font-display text-3xl md:text-5xl leading-[1.15] font-light">
                 To be the world's <em className="italic text-teal-soft">foremost mentorship partner</em> for ambitious students — guiding them toward the overseas institutions best suited to their goals.
@@ -111,6 +106,11 @@ function About() {
                 Start the conversation
                 <ArrowUpRight className="h-4 w-4" />
               </Link>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="overflow-hidden rounded-[2rem] shadow-2xl">
+                <img src={roadmapImg} alt="Your roadmap to global education" className="h-auto w-full object-cover" loading="lazy" />
+              </div>
             </div>
           </div>
         </div>
