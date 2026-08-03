@@ -87,9 +87,9 @@ function About() {
       </section>
 
       {/* Roadmap banner */}
-      <section className="container-editorial py-20">
-        <div className="overflow-hidden">
-          <img src={roadmapImg} alt="Your roadmap to global education" className="w-full h-auto object-cover" loading="lazy" />
+      <section className="container-editorial py-12 lg:py-20">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] shadow-xl">
+          <img src={roadmapImg} alt="Your roadmap to global education" className="h-auto w-full object-cover" loading="lazy" />
         </div>
       </section>
 
