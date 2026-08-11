@@ -8,7 +8,7 @@ export function SiteFooter() {
       <div className="container-editorial py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-3">
+            <div className="inline-flex items-center gap-3 rounded-2xl bg-primary-foreground px-6 py-4">
               <img src={logoAsset.url} alt="Helm Global" className="h-20 w-auto object-contain" />
             </div>
             <p className="mt-6 max-w-md font-display text-2xl leading-snug text-primary-foreground/90">
