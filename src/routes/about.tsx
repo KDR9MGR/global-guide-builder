@@ -38,7 +38,7 @@ function About() {
             <h2 className="mt-6 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">
               Personalised mentorship. Strategic execution.
             </h2>
-            <div className="mt-10 overflow-hidden aspect-[4/5]">
+            <div className="mt-10 overflow-hidden rounded-[2rem] aspect-[4/5] shadow-lg">
               <img src={mentorshipImg} alt="Student mentorship" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
@@ -97,10 +97,10 @@ function About() {
             <div className="lg:col-span-7">
               <div className="eyebrow text-teal-soft">Vision</div>
               <p className="mt-8 font-display text-3xl md:text-5xl leading-[1.15] font-light">
-                To be the world's <em className="italic text-teal-soft">foremost mentorship partner</em> for ambitious students — guiding them toward the overseas institutions best suited to their goals.
+                To be the world's <em className="italic text-teal-soft">foremost mentorship partner</em> for ambitious students — guiding them towards the overseas institutions best suited to their goals.
               </p>
               <p className="mt-10 max-w-2xl text-lg text-primary-foreground/80 leading-relaxed">
-                Our team of experienced, dedicated educators crafts a personalised approach for every student — one that recognises individual talents and interests while fostering both academic growth and a genuinely engaging learning experience.
+                Our team of experienced, dedicated educators craft a personalised approach for every student — one that recognises individual talents and interests while fostering both academic growth and a genuinely engaging learning experience.
               </p>
               <Link to="/contact" className="mt-12 inline-flex items-center gap-3 bg-teal px-8 py-4 text-xs font-medium uppercase tracking-[0.22em] hover:bg-teal-soft hover:text-navy-deep transition-colors">
                 Start the conversation
