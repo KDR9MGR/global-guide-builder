@@ -8,11 +8,11 @@ import campusClockImg from "@/assets/campus-clocktower.png.asset.json";
 import tennisServeImg from "@/assets/tennis-serve.png.asset.json";
 import globalJourneyImg from "@/assets/global-journey.png.asset.json";
 
-import pillar1 from "@/assets/pillar-1.png.asset.json";
+import pillar1 from "@/assets/pillar-1b.png.asset.json";
 import pillar2 from "@/assets/pillar-2.png.asset.json";
 import pillar3 from "@/assets/pillar-3.png.asset.json";
 import pillar4 from "@/assets/pillar-4.png.asset.json";
-import pillar5 from "@/assets/pillar-5.png.asset.json";
+import pillar5 from "@/assets/pillar-5b.png.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -111,9 +111,8 @@ function Index() {
                 <PillarCard key={p.title} pillar={p} index={i} />
               ))}
             </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+            <div className="mx-auto w-full lg:w-2/3 grid md:grid-cols-2 gap-px bg-border">
               <PillarCard pillar={pillars[3]} index={3} />
-              <div className="hidden lg:block bg-card" aria-hidden="true" />
               <PillarCard pillar={pillars[4]} index={4} />
             </div>
           </div>
