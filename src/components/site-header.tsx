@@ -22,9 +22,9 @@ export function SiteHeader() {
       <div className="container-editorial flex h-24 items-center justify-between">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img src={logoAsset.url} alt="Helm Global Education" className="h-[72px] w-auto object-contain" />
-          <div className="hidden sm:flex flex-col leading-none">
+          <div className="hidden sm:flex flex-col items-start leading-none">
             <span className="font-serif text-[1.75rem] italic font-light text-navy-deep tracking-tight">Helm Global</span>
-            <span className="text-[0.6rem] uppercase tracking-[0.22em] text-teal font-medium">Education Consultancy</span>
+            <span className="mt-1 w-full text-[0.6rem] uppercase tracking-[0.22em] text-teal font-medium text-left">Education Consultancy</span>
           </div>
         </Link>
 

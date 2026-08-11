@@ -184,8 +184,8 @@ function Index() {
 function PillarCard({ pillar, index }: { pillar: typeof pillars[number]; index: number }) {
   return (
     <div className="group relative bg-card overflow-hidden min-h-[380px] flex flex-col hover:bg-navy-deep hover:text-primary-foreground transition-colors duration-500">
-      <div className="aspect-[4/3] overflow-hidden bg-secondary">
-        <img src={pillar.image} alt={pillar.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+      <div className="aspect-[4/3] overflow-hidden bg-secondary flex items-center justify-center p-4">
+        <img src={pillar.image} alt={pillar.title} loading="lazy" className="h-full w-full object-contain transition-transform duration-[1200ms] group-hover:scale-105" />
       </div>
       <div className="p-8 flex-1 flex flex-col">
         <div className="flex items-center justify-between">
