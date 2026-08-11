@@ -8,11 +8,11 @@ import campusClockImg from "@/assets/campus-clocktower.png.asset.json";
 import tennisServeImg from "@/assets/tennis-serve.png.asset.json";
 import globalJourneyImg from "@/assets/global-journey.png.asset.json";
 
-import pillar1 from "@/assets/pillar-1b.png.asset.json";
+import pillar1 from "@/assets/pillar-1c.png";
 import pillar2 from "@/assets/pillar-2.png.asset.json";
-import pillar3 from "@/assets/pillar-3.png.asset.json";
-import pillar4 from "@/assets/pillar-4.png.asset.json";
-import pillar5 from "@/assets/pillar-5b.png.asset.json";
+import pillar3 from "@/assets/pillar-3-clean.png";
+import pillar4 from "@/assets/pillar-4-clean.png";
+import pillar5 from "@/assets/pillar-5c.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
