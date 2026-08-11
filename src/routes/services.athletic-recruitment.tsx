@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import img from "@/assets/athletic.jpg";
 import golfAsset from "@/assets/athletic-golf-coach.jpg.asset.json";
 import collageAsset from "@/assets/athletic-collage.png.asset.json";
+import teamCoachingAsset from "@/assets/team-coaching.png.asset.json";
 const collageImg = collageAsset.url;
 const golfImg = golfAsset.url;
 
@@ -55,11 +56,16 @@ function Page() {
 
       {/* Why families choose us */}
       <section className="container-editorial py-28 lg:py-36">
-        <div className="max-w-2xl mb-16">
-          <div className="eyebrow">Why families choose Helm Global</div>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">
-            The right coach. The right programme. The right fit.
-          </h2>
+        <div className="grid lg:grid-cols-12 gap-12 items-center mb-16">
+          <div className="lg:col-span-6">
+            <div className="eyebrow">Why families choose Helm Global</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">
+              The right coach. The right programme. The right fit.
+            </h2>
+          </div>
+          <div className="lg:col-span-6 overflow-hidden rounded-[2rem] aspect-[16/10]">
+            <img src={teamCoachingAsset.url} alt="Coach briefing a team of student-athletes" loading="lazy" className="h-full w-full object-cover" />
+          </div>
         </div>
         <div className="grid md:grid-cols-2 gap-px bg-border">
           {why.map((w, i) => (
@@ -92,10 +98,10 @@ function Page() {
       {/* Four pillars */}
       <section className="container-editorial pt-4 pb-8">
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="overflow-hidden aspect-[4/5] bg-secondary">
+          <div className="overflow-hidden rounded-[2rem] aspect-[4/5] bg-secondary">
             <img src={img} alt="Tennis training" loading="lazy" className="h-full w-full object-cover" />
           </div>
-          <div className="overflow-hidden aspect-[4/5] bg-secondary md:mt-16">
+          <div className="overflow-hidden rounded-[2rem] aspect-[4/5] bg-secondary">
             <img src={golfImg} alt="Golf training" loading="lazy" className="h-full w-full object-cover" />
           </div>
         </div>
