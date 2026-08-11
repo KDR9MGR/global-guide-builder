@@ -4,6 +4,7 @@ import { PageHero } from "@/components/page-hero";
 import mentorshipImg from "@/assets/student-mentorship.jpg";
 import campusImg from "@/assets/hero-campus.jpg";
 import roadmapImg from "@/assets/roadmap.jpg";
+import missionCompass from "@/assets/mission-compass.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -71,6 +72,9 @@ function About() {
             <h2 className="mt-6 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">
               Cultivating the character that great institutions seek.
             </h2>
+            <div className="mt-10 overflow-hidden rounded-[2rem] shadow-lg">
+              <img src={missionCompass.url} alt="Compass needle pointing to Mission" loading="lazy" className="h-full w-full object-cover" />
+            </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6 space-y-6 text-lg leading-relaxed text-foreground/80">
             <p>

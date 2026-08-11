@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 import undergraduateBg from "@/assets/undergraduate-bg.png.asset.json";
 import gradesStrategy from "@/assets/grades-strategy.jpg.asset.json";
+import planningCompass from "@/assets/planning-compass.png.asset.json";
+import admissionsCampus from "@/assets/admissions-campus.png.asset.json";
 
 export const Route = createFileRoute("/services/undergraduate")({
   component: Page,
@@ -107,10 +109,17 @@ function Page() {
       {/* Planning phase */}
       <section className="bg-secondary/60 py-28">
         <div className="container-editorial">
-          <div className="max-w-2xl mb-16">
-            <div className="eyebrow">Planning Phase</div>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">A long-term roadmap for every stage.</h2>
-            <p className="mt-6 text-foreground/75 leading-relaxed">A four-year architecture that turns curiosity into conviction — anchoring every student's global journey in disciplined preparation.</p>
+          <div className="mb-16 grid lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-7">
+              <div className="eyebrow">Planning Phase</div>
+              <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">A long-term roadmap for every stage.</h2>
+              <p className="mt-6 text-foreground/75 leading-relaxed">A four-year architecture that turns curiosity into conviction — anchoring every student's global journey in disciplined preparation.</p>
+            </div>
+            <div className="lg:col-span-5">
+              <div className="overflow-hidden rounded-[2rem] shadow-lg aspect-[4/3]">
+                <img src={planningCompass.url} alt="Nautical compass on a boat at sea" loading="lazy" className="h-full w-full object-cover" />
+              </div>
+            </div>
           </div>
           <div className="grid md:grid-cols-2 gap-px bg-border">
             {grades.map((g) => (
@@ -129,12 +138,19 @@ function Page() {
 
       {/* Application process */}
       <section className="container-editorial py-28 lg:py-36">
-        <div className="max-w-3xl mb-16">
-          <div className="eyebrow">Application Process</div>
-          <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">Built on a system-by-system understanding of global admissions.</h2>
-          <p className="mt-6 text-lg text-foreground/70 leading-relaxed">
-            Success in the application process begins with expertise — and our model is built on a deep, system-by-system understanding of how admissions works across the globe's leading institutions. Every applicant is backed by a dedicated core team working in close coordination throughout the process. This core team is further reinforced by a broader network of specialists, including former admissions officers and youth mentors drawn from current students and alumni of top-tier U.S. universities. Parents and students are mentored personally through one-on-one sessions.
-          </p>
+        <div className="mb-16 grid lg:grid-cols-12 gap-12 items-center">
+          <div className="lg:col-span-7">
+            <div className="eyebrow">Application Process</div>
+            <h2 className="mt-4 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">Built on a system-by-system understanding of global admissions.</h2>
+            <p className="mt-6 text-lg text-foreground/70 leading-relaxed">
+              Success in the application process begins with expertise — and our model is built on a deep, system-by-system understanding of how admissions works across the globe's leading institutions. Every applicant is backed by a dedicated core team working in close coordination throughout the process. This core team is further reinforced by a broader network of specialists, including former admissions officers and youth mentors drawn from current students and alumni of top-tier U.S. universities. Parents and students are mentored personally through one-on-one sessions.
+            </p>
+          </div>
+          <div className="lg:col-span-5">
+            <div className="overflow-hidden rounded-[2rem] shadow-lg aspect-[4/3]">
+              <img src={admissionsCampus.url} alt="Historic university law school building on a leafy campus" loading="lazy" className="h-full w-full object-cover" />
+            </div>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
