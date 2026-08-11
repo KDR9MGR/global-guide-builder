@@ -19,11 +19,11 @@ export const Route = createFileRoute("/")({
 });
 
 const pillars = [
-  { icon: Target, title: "Skill-Centred Counselling", body: "Building the capabilities universities genuinely reward — not just the credentials they require.", image: pillar1.url },
+  { icon: Target, title: "Skill-Centred Counselling", body: "Building the capabilities universities genuinely reward — not just the credentials they require.", image: pillar1 },
   { icon: Compass, title: "Global Profile Development", body: "Sustained, expert-led extracurricular profiles calibrated to target institutions.", image: pillar2.url },
-  { icon: Sparkles, title: "Elite Applications Support", body: "Top 1% advisors guiding essays, activities, interviews and strategy.", image: pillar3.url },
-  { icon: BookOpen, title: "Academic Excellence Coaching", body: "Specialist study mentors ensuring grades never become the weak link.", image: pillar4.url },
-  { icon: Users, title: "Skill Development Academies", body: "20+ academies across AI, Robotics, Entrepreneurship, Social Impact and Policy — each ending in a verifiable capstone.", image: pillar5.url },
+  { icon: Sparkles, title: "Elite Applications Support", body: "Top 1% advisors guiding essays, activities, interviews and strategy.", image: pillar3 },
+  { icon: BookOpen, title: "Academic Excellence Coaching", body: "Specialist study mentors ensuring grades never become the weak link.", image: pillar4 },
+  { icon: Users, title: "Skill Development Academies", body: "20+ academies across AI, Robotics, Entrepreneurship, Social Impact and Policy — each ending in a verifiable capstone.", image: pillar5 },
 ];
 
 const destinations = ["United States", "United Kingdom", "Singapore", "Hong Kong", "Canada", "Germany"];
