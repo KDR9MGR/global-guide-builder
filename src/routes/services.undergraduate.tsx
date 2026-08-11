@@ -4,6 +4,9 @@ import undergraduateBg from "@/assets/undergraduate-bg.png.asset.json";
 import gradesStrategy from "@/assets/grades-strategy.jpg.asset.json";
 import planningCompass from "@/assets/planning-compass.png.asset.json";
 import admissionsCampus from "@/assets/admissions-campus.png.asset.json";
+import mentorshipImg from "@/assets/mentorship-session.png.asset.json";
+import experienceImg from "@/assets/experience-campus.png.asset.json";
+import skillImg from "@/assets/skill-development.png.asset.json";
 
 export const Route = createFileRoute("/services/undergraduate")({
   component: Page,
@@ -172,6 +175,9 @@ function Page() {
               <div className="eyebrow text-teal-soft">Mentorship</div>
               <h2 className="mt-6 font-display text-4xl md:text-5xl font-light leading-tight">Personalised mentorship & guidance for academic success.</h2>
               <p className="mt-6 text-primary-foreground/80 leading-relaxed">A structured support system that goes beyond academics to nurture confidence, clarity, and long-term achievement.</p>
+              <div className="mt-10 overflow-hidden rounded-[2rem] aspect-[4/3]">
+                <img src={mentorshipImg.url} alt="Mentor and student in a one-to-one planning session" loading="lazy" className="h-full w-full object-cover" />
+              </div>
             </div>
             <div className="lg:col-span-6 lg:col-start-7">
               <ul className="space-y-6">
@@ -193,6 +199,9 @@ function Page() {
           <div className="lg:col-span-4">
             <div className="eyebrow">Experience</div>
             <h2 className="mt-6 font-display text-4xl text-navy-deep font-light leading-tight">Summer programmes, professional exposure & volunteering.</h2>
+            <div className="mt-10 overflow-hidden rounded-[2rem] aspect-[4/3]">
+              <img src={experienceImg.url} alt="Students on a university lawn during a summer programme" loading="lazy" className="h-full w-full object-cover" />
+            </div>
           </div>
           <div className="lg:col-span-7 lg:col-start-6">
             <ul className="space-y-6">
@@ -215,6 +224,9 @@ function Page() {
               <div className="eyebrow">Skill Development Program</div>
               <h2 className="mt-6 font-display text-4xl md:text-5xl text-navy-deep font-light leading-tight">20+ academies. Each ending in a verifiable capstone.</h2>
               <p className="mt-6 text-foreground/80 leading-relaxed">Expert-led academies designed to build the credentials universities actually reward.</p>
+              <div className="mt-10 overflow-hidden rounded-[2rem] aspect-[16/9]">
+                <img src={skillImg.url} alt="Skill development illustration" loading="lazy" className="h-full w-full object-cover" />
+              </div>
             </div>
             <div className="lg:col-span-6 lg:col-start-7">
               <ul className="divide-y divide-navy-deep/10">
