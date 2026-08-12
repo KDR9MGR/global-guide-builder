@@ -140,7 +140,7 @@ function Page() {
       <section className="container-editorial py-28 lg:py-36">
         <div className="grid lg:grid-cols-12 gap-16">
           <div className="lg:col-span-5">
-            <div className="overflow-hidden aspect-[4/5]">
+            <div className="overflow-hidden aspect-[4/5] rounded-[2rem]">
               <img src={img} alt="Historic boarding school" loading="lazy" className="h-full w-full object-cover" />
             </div>
           </div>
